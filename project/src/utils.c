@@ -1,11 +1,14 @@
 #include "include.h"
 #include "utils.h"
 
-size_t timer_from(unsigned char from) {
+size_t timer_from(unsigned short from) {
     size_t counter = 0;
-    for (unsigned char i = from; i != 0; --i) {
+    for (int i = from; i >= 0; --i) {
         ++counter;
-        printf("%u", i);
+        printf("%d", i);
+        if (i != 0) {
+            printf(" ");
+        }
     }
     return counter;
 }

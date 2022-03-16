@@ -1,6 +1,7 @@
 #include "include.h"
 #include "utils.h"
 
+#define ERR_NEG_NUM 0
 #define ERR_ARGS_COUNT (-1)
 #define ERR_WRONG_FLG (-2)
 
@@ -36,8 +37,12 @@ int main(int argc, const char** argv) {
     switch (Test_case) {
         case TST_FOO_FIX: {
             int to = atoi(data);
+            if (to < 0) {
+                printf("0");
+                return ERR_NEG_NUM;
+            }
             size_t ticks_count = timer_from(to);
-            printf("%zu\n", ticks_count);
+            printf("\n%zu", ticks_count);
             break;
         }
         case TST_FOO_IMPL: {
@@ -50,6 +55,7 @@ int main(int argc, const char** argv) {
             } else {
                 return ERR_ARGS_COUNT;
             }
+            break;
         }
         case TST_MOD_IMPL: {
             // int num = atoi(data);
