@@ -1,6 +1,7 @@
 #include "include.h"
 #include "utils.h"
 #include "modul_prime.h"
+#include "modul_recursion.h"
 
 #define ERR_NEG_NUM 0
 #define ERR_ARGS_COUNT (-1)
@@ -9,6 +10,7 @@
 #define TST_FOO_FIX     1
 #define TST_FOO_IMPL    2
 #define TST_MOD_IMPL    3
+#define TST_NEW_CASE    4
 
 
 
@@ -65,6 +67,11 @@ int main(int argc, const char** argv) {
              else
               printf("1");
              break;
+        }
+        case TST_NEW_CASE: {
+            int num = atoi(data);
+            recursion(num);
+            break;
         }
         default: {
             return ERR_WRONG_FLG;

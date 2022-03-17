@@ -1,5 +1,4 @@
 #include "include.h"
-#include "utils.h"
 #include "modul_prime.h"
 
 int prime_numbers(int num) {

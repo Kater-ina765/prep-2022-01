@@ -5,7 +5,8 @@ HDRS_DIR = project/include
 SRCS = \
        project/src/main.c \
        project/src/utils.c \
-	   project/src/modul_prime.c
+	   project/src/modul_prime.c \
+	   project/src/modul_recursion.c 
 
 .PHONY: all build rebuild check test clean
 
